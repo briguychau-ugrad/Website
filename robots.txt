@@ -1,0 +1,14 @@
+User-agent: *
+
+#Allow: /index.php
+Disallow: /cgi-bin/
+Disallow: /css/
+Disallow: /favicons/
+Disallow: /font/
+Disallow: /glyphicons/
+Disallow: /img/
+Disallow: /js/
+Disallow: /projects/
+Disallow: /default.html
+Disallow: /error.php
+Disallow: /resume-brian-chau.pdf

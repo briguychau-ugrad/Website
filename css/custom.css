@@ -1,0 +1,187 @@
+/*
+
+CUSTOM CSS by Brian Chau
+Modifications to the Twitter Bootstrap base css pack.
+
+*/
+
+/* FONTS */
+
+@font-face {
+    font-family: 'DejaVu Sans';
+    src: url('/fonts/DejaVuSans-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DejaVu Sans';
+    src: url('/fonts/DejaVuSans-Oblique-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: oblique;
+}
+
+@font-face {
+    font-family: 'DejaVu Sans';
+    src: url('/fonts/DejaVuSans-Bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'DejaVu Sans';
+    src: url('/fonts/DejaVuSans-BoldOblique-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: oblique;
+}
+
+@font-face {
+    font-family: 'DejaVu Sans Mono';
+    src: url('/fonts/DejaVuSansMono-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DejaVu Sans Mono';
+    src: url('/fonts/DejaVuSansMono-Oblique-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: oblique;
+}
+
+@font-face {
+    font-family: 'DejaVu Sans Mono';
+    src: url('/fonts/DejaVuSansMono-Bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'DejaVu Sans Mono';
+    src: url('/fonts/DejaVuSansMono-BoldOblique-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: oblique;
+}
+/*
+@font-face {
+    font-family: 'Nevis';
+    src: url('/fonts/nevis-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+em {
+    font-style: oblique;
+}
+body,
+input,
+button,
+select,
+textarea,
+.navbar-search .search-query {
+	font-family: "DejaVu Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+code,
+pre,
+.code {
+	font-family: "DejaVu Sans Mono", Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
+	/*text-transform: uppercase;
+	font-family: "Nevis", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+	font-family: "DejaVu Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* REGULAR STYLES */
+.navbar .nav,
+.navbar .nav > li {
+	font-weight: 150%;
+	font-variant:small-caps;
+	color: #101010;
+	font-size: 13pt;
+	height: 125%;
+	float:none;
+	display:inline-block;
+	*display:inline; /* ie7 fix */
+	*zoom:1; /* hasLayout ie7 trigger */
+}
+.navbar-inner {
+	text-align:center;
+}
+.jumbotron {
+	margin: 0 auto;
+	padding: 96px 0 48px 0;
+	text-align: center;
+	background-color: #eeeeee;
+}
+.jumbotron h1 {
+	font-size: 72px;
+	line-height: 1;
+}
+.jumbotron .lead {
+	font-size: 24px;
+	line-height: 1.25;
+}
+.jumbotron .btn {
+	font-size: 21px;
+	padding: 14px 24px;
+}
+.content-main {
+	text-align: center;
+}
+.contact-info-row {
+	height: 40px;
+}
+.contact-info-icon {
+	text-align: center;
+	padding-top: 8px;
+}
+.contact-info-text {
+	padding: 10px inherit;
+}
+.contact-form-label {
+	 width: 100px !important;
+}
+.contact-form-box {
+	 margin-left: 120px !important;
+}
+.control-group-recaptcha {
+	margin: 0 0 0 180px;;
+	*display: inline-block;
+	*padding-left: 20px;
+	*margin-left: 0;
+}
+#footer {
+	background-color: #cccccc;
+	padding: 20px 0;
+}
+.footer-section {
+	margin: 0 25px;
+}
+.section-light {
+	background-color: #eeeeee;
+	padding: 50px 0;
+}
+.section-dark {
+	background-color: #222222;
+	padding: 50px 0;
+	color: #ffffff;
+}
+.section-separator {
+	height: 1px;
+	background-color: #888888;
+}
+.progress {
+	  background-color: #333333;
+	  background-image: -moz-linear-gradient(top, #313131, #353535);
+	  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#313131), to(#353535));
+	  background-image: -webkit-linear-gradient(top, #313131, #353535);
+	  background-image: -o-linear-gradient(top, #313131, #353535);
+	  background-image: linear-gradient(to bottom, #313131, #353535);
+}
