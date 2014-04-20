@@ -256,7 +256,7 @@ if(isset($_POST['submitted'])) {
 					<h4>Avalon Helper</h4>
 					<p>Language/Platform: <em>Java/Android</em></p>
 					<p>A helper app for the card game called Avalon. The app simplifies the initial card distribution process by automating the character assignment using an Android app, and elimintates the tedious reveal phase. The app also keeps track of player stats.</p>
-					<p><a href="https://github.com/briguychau/AvalonHelper" target="_blank">GitHub</a></p>
+					<p><a href="https://github.com/briguychau/Avalon-Helper" target="_blank">GitHub</a></p>
 					<h4>S3/DXT Texture Converter</h4>
 					<p>Language: <em>C++</em></p>
 					<p>Converts bitmap files to/from the S3/DXT3 texture format for use with Microsoft Flight Simulator, employing self-written algorithms, file I/O, and OpenMP multithreading.</p>
