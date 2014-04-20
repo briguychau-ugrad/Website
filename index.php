@@ -159,6 +159,7 @@ if(isset($_POST['submitted'])) {
 							<h6>January 2014 to April 2014</h6>
 							<ul>
 								<li>I worked on a software engineering team during my time at ATA. I introduced a few new features and implemented them on the server and both Android and iOS clients.</li>
+								<li>My projects were mainly based on improving user aquisition and monetization. I introduced Facebook sharing and memberships into the application.</li>
 							</ul>
 						</div>
 					</div>
@@ -252,6 +253,10 @@ if(isset($_POST['submitted'])) {
 			<div class="row">
 				<div class="col-md-6">
 					<h2>Personal</h2>
+					<h4>Avalon Helper</h4>
+					<p>Language/Platform: <em>Java/Android</em></p>
+					<p>A helper app for the card game called Avalon. The app simplifies the initial card distribution process by automating the character assignment using an Android app, and elimintates the tedious reveal phase. The app also keeps track of player stats.</p>
+					<p><a href="https://github.com/briguychau/AvalonHelper" target="_blank">GitHub</a></p>
 					<h4>S3/DXT Texture Converter</h4>
 					<p>Language: <em>C++</em></p>
 					<p>Converts bitmap files to/from the S3/DXT3 texture format for use with Microsoft Flight Simulator, employing self-written algorithms, file I/O, and OpenMP multithreading.</p>
@@ -272,7 +277,7 @@ if(isset($_POST['submitted'])) {
 					<p>FoodHero is a restaurant-based social media website. Users are allowed to “fave” and review restaurants, upload photos of food, follow other users and see their reviews, and search for restaurants within Vancouver and UBC. Restaurant data from FourSquare, photo uploading provided by Flickr, mapping provided by Google Maps.</p>
 					<p><a href="http://foodhero.brianchau.ca" target="_blank">Live site</a></p>
 					<h4>UBC Sustainability App (CPSC 210)</h4>
-					<p>Language: <em>Java</em></p>
+					<p>Language/Platform: <em>Java/Android</em></p>
 					<p>Extended a partially completed Android application to support route searching, XML parsing, and GPS mapping. Used JUnit testing to verify code.</p>
 				</div>
 			</div>
@@ -375,7 +380,7 @@ if(isset($_POST['submitted'])) {
 							</div>
 							<div class="row contact-info-row">
 								<div class="col-md-3 contact-info-icon"><img src="./glyphicons/glyphicons_036_file.png" alt="R&#233;sum&#233;" /></div>
-								<div class="col-md-9 contact-info-text"><a href="./resume_brian_chau.pdf" target="_blank">R&#233;sum&#233; (October 2013)</a></div>
+								<div class="col-md-9 contact-info-text"><a href="./resume_brian_chau.pdf" target="_blank">R&#233;sum&#233; (April 2014)</a></div>
 							</div>
 						</div>
 					</div>
