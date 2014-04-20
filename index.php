@@ -253,14 +253,17 @@ if(isset($_POST['submitted'])) {
 			<div class="row">
 				<div class="col-md-6">
 					<h2>Personal</h2>
+					<br />
 					<h4>Avalon Helper</h4>
 					<p>Language/Platform: <em>Java/Android</em></p>
 					<p>A helper app for the card game called Avalon. The app simplifies the initial card distribution process by automating the character assignment using an Android app, and elimintates the tedious reveal phase. The app also keeps track of player stats.</p>
 					<p><a href="https://github.com/briguychau/Avalon-Helper" target="_blank">GitHub</a></p>
+					<br />
 					<h4>S3/DXT Texture Converter</h4>
 					<p>Language: <em>C++</em></p>
 					<p>Converts bitmap files to/from the S3/DXT3 texture format for use with Microsoft Flight Simulator, employing self-written algorithms, file I/O, and OpenMP multithreading.</p>
 					<p><a href="https://github.com/briguychau/FSbmp32" target="_blank">GitHub</a></p>
+					<br />
 					<h4>Assembly Language Simulator </h4>
 					<p>Language: <em>C++</em></p>
 					<p>A parser and a simulator for the “Y86” Assembly language described in “Computer Systems: A Programmer’s Perspective” by Bryant and O’Hallaron.</p>
@@ -268,14 +271,17 @@ if(isset($_POST['submitted'])) {
 				</div>
 				<div class="col-md-6">
 					<h2>Academic</h2>
+					<br />
 					<h4>Clue Assistant (CPSC 312)</h4>
 					<p>Languages: <em>Prolog</em></p>
 					<p>This program serves as an assistant to a Clue (or Cluedo) player. It is able to remember moves, keep track of what your opponents have, and advise you of what suggestions and accusations to make.</p>
 					<p><a href="https://github.com/briguychau/CPSC-312-Project-2" target="_blank">GitHub</a></p>
+					<br />
 					<h4>FoodHero (CPSC 310)</h4>
 					<p>Languages: <em>HTML, PHP, JavaScript, CSS, SQL</em></p>
 					<p>FoodHero is a restaurant-based social media website. Users are allowed to “fave” and review restaurants, upload photos of food, follow other users and see their reviews, and search for restaurants within Vancouver and UBC. Restaurant data from FourSquare, photo uploading provided by Flickr, mapping provided by Google Maps.</p>
 					<p><a href="http://foodhero.brianchau.ca" target="_blank">Live site</a></p>
+					<br />
 					<h4>UBC Sustainability App (CPSC 210)</h4>
 					<p>Language/Platform: <em>Java/Android</em></p>
 					<p>Extended a partially completed Android application to support route searching, XML parsing, and GPS mapping. Used JUnit testing to verify code.</p>
@@ -297,7 +303,7 @@ if(isset($_POST['submitted'])) {
 					<h4>Faculty of Science</h4>
 					Honours Computer Science and Software Engineering<br />
 					Computer Science Co-op Program<br />
-					September 2011 to May 2016 <em>(expected)</em><br /><br />
+					September 2011 to December 2015 <em>(expected)</em><br /><br />
 					Select completed coursework:
 					<ul>
 						<li>CPSC 310: Introduction to Software Engineering</li>
