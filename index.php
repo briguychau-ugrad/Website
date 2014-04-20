@@ -194,7 +194,7 @@ if(isset($_POST['submitted'])) {
 					</div>
 				</div>
 				<div class="col-md-6">
-					<h2>Languages</h2>
+					<h2>Language Proficiency</h2>
 					<div class="code" style="font-size: 14pt;">
 						<div class="row">
 							<div class="col-xs-4">C++</div>
@@ -484,5 +484,5 @@ if(isset($_POST['submitted'])) {
 
 <!-- Suffix Information -->
 <!-- Last update timestamp: 2014-04-19T18:37-07 -->
-<!-- Version: 7.1.0 -->
+<!-- Version: 7.1.1 -->
 <!-- Licence for DejaVu Fonts at http://dejavu-fonts.org/wiki/License -->
