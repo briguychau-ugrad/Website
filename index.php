@@ -351,7 +351,7 @@ if(isset($_POST['submitted'])) {
 								</ul>
 							</li>
 							<li>I can speak English, Chinese (Cantonese and Mandarin), some French, and a little bit of German (in addition to C++, Java, etc.).</li>
-							<li>I use Windows 7, Arch Linux, Linux Mint 15, and Android 4.4.</li>
+							<li>I use Windows 7, Arch Linux, Linux Mint 16, and Android 4.4.</li>
 							<li>I am part of the online "Microsoft Flight Simulator" community. I make repaints for freeware aircraft, which can be found by searching for my name on <a href="http://www.avsim.com/">AVSIM</a> or <a href="http://www.flightsim.com/">FlightSim</a>. Alternatively, <a href="http://fs.brianchau.ca/">here is a link</a> to my Flight Simulator downloads page.</li>
 						</ul>
 					</div>
