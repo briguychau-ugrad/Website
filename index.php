@@ -151,6 +151,20 @@ if(isset($_POST['submitted'])) {
 					<h2>Experience</h2>
 					<div class="row">
 						<div class="col-md-3">
+							<img src="./img/microsoft-white-small.png" alt="Microsoft">
+						</div>
+						<div class="col-md-8" style="text-align: left;">
+							<h4>Microsoft Corporation</h4>
+							<h5>Software Development Engineer Intern</h5>
+							<h6>May 2014 to August 2014</h6>
+							<ul>
+								<li>I'm an intern in Windows working on something for Direct2D.</li>
+							</ul>
+						</div>
+					</div>
+					<br /><br /><!-- NOTE NEED THIS DOUBLE BR TAG BETWEEN ELEMENTS -->
+					<div class="row">
+						<div class="col-md-3">
 							<img src="./img/ata-white-small.png" alt="A Thinking Ape">
 						</div>
 						<div class="col-md-8" style="text-align: left;">
@@ -176,20 +190,6 @@ if(isset($_POST['submitted'])) {
 								<li>CPSC 210 (Gail Murphy, Ivan Beschastnikh), Sep-Dec 2013</li>
 								<li>CPSC 210 (Kurt Eiselt), Jul-Aug 2013</li>
 								<li>CPSC 101 (Holger Hoos), Jan-Apr 2013</li>
-							</ul>
-						</div>
-					</div>
-					<h2>Future Internships</h2>
-					<div class="row">
-						<div class="col-md-3">
-							<img src="./img/microsoft-white-small.png" alt="Microsoft">
-						</div>
-						<div class="col-md-8" style="text-align: left;">
-							<h4>Microsoft Corporation</h4>
-							<h5>Software Development Engineer Intern</h5>
-							<h6>May 2014 to August 2014</h6>
-							<ul>
-								<li>I will be doing a summer internship at Microsoft in 2014, on the Operating Systems Core team.</li>
 							</ul>
 						</div>
 					</div>
