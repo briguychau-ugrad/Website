@@ -444,7 +444,7 @@ if(isset($_POST['submitted'])) {
 <div style="height: 1px; background-color: #dddddd;"></div>
 <div id="footer">
 	<div class="container" style="text-align: center; width: 100%;">
-		<span class="footer-section">Copyright &copy; 2013 Brian Chau</span>
+		<span class="footer-section">Copyright &copy; 2014 Brian Chau</span>
 		<span class="footer-section"><a href="http://validator.w3.org/check?uri=referer&amp;No200=1" target="_blank">Valid</a> HTML<img src="./img/html5-black.png" alt="HTML5" /></span>
 		<span class="footer-section">
 			<a href="http://www.glyphicons.com/" target="_blank">GLYPHICONS</a> are used under the <a href="http://creativecommons.org/licenses/by/3.0/deed.en" target="_blank">Creative Commons Attribution 3.0 Unported</a> license
@@ -498,6 +498,6 @@ if(isset($_POST['submitted'])) {
 </html>
 
 <!-- Suffix Information -->
-<!-- Last update timestamp: 2014-04-19T18:37-07 -->
+<!-- Last update timestamp: 2014-06-03T23:16-07 -->
 <!-- Version: 7.1.1 -->
 <!-- Licence for DejaVu Fonts at http://dejavu-fonts.org/wiki/License -->
