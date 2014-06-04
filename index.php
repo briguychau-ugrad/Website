@@ -89,7 +89,7 @@ if(isset($_POST['submitted'])) {
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="./favicons/apple-touch-icon-114-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="./favicons/apple-touch-icon-72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" href="./favicons/apple-touch-icon-57-precomposed.png">
-	<link rel="shortcut icon" href="./favicons/favicon.png">
+	<link rel="icon" href="./favicons/favicon.png">
 	
 </head>
 <body>
