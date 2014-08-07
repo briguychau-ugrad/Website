@@ -370,7 +370,8 @@ if(isset($_POST['submitted'])) {
 							</div>
 							<div class="row contact-info-row">
 								<div class="col-md-3 contact-info-icon"><img src="./glyphicons/glyphicons_169_phone_edit.png" alt="Phone" /></div>
-								<div class="col-md-9 contact-info-text"><img src="./img/phone_usa.png" alt="american phone number" /><br />(USA)</div>
+								<div class="col-md-9 contact-info-text">US Number temporarily unavailable</div>
+								<!--<div class="col-md-9 contact-info-text"><img src="./img/phone_usa.png" alt="american phone number" /><br />(USA)</div>-->
 							</div>
 							<div class="row contact-info-row">
 								<div class="col-md-3 contact-info-icon"><img src="./glyphicons/glyphicons_social_21_github.png" alt="GitHub" /></div>
