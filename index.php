@@ -158,7 +158,7 @@ if(isset($_POST['submitted'])) {
 							<h5>Software Development Engineer Intern</h5>
 							<h6>May 2014 to August 2014</h6>
 							<ul>
-								<li>I'm an intern in Windows working on something for Direct2D.</li>
+								<li>I'm an intern in Windows working on a graphics API.</li>
 							</ul>
 						</div>
 					</div>
