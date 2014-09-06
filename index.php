@@ -351,15 +351,14 @@ if(isset($_POST['submitted'])) {
 								</ul>
 							</li>
 							<li>I can speak English, Chinese (Cantonese and Mandarin), some French, and a little bit of German (in addition to C++, Java, etc.).</li>
-							<li>I use Windows 7, Linux Mint 17, and Android 4.4.</li>
+							<li>I use Windows 7, Mac OS X Mavericks, Linux Mint 17, and Android 4.4.</li>
 							<li>I am part of the online "Microsoft Flight Simulator" community. I make repaints for freeware aircraft, which can be found by searching for my name on <a href="http://www.avsim.com/">AVSIM</a> or <a href="http://www.flightsim.com/">FlightSim</a>. Alternatively, <a href="http://fs.brianchau.ca/">here is a link</a> to my Flight Simulator downloads page.</li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-md-6 col-md-offset-1">
 					<h2>Directory</h2>
-					<div class="row">
-						<div class="col-md-9 col-md-offset-3" style="text-align: left;">
+					<div class="row">			:q`			<div class="col-md-9 col-md-offset-3" style="text-align: left;">
 							<div class="row contact-info-row">
 								<div class="col-md-3 contact-info-icon"><img src="./glyphicons/glyphicons_010_envelope_edit.png" alt="Email" /></div>
 								<div class="col-md-9 contact-info-text"><img src="./img/email.png" alt="me AT brianchau DOT ca" /></div>
