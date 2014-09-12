@@ -358,7 +358,8 @@ if(isset($_POST['submitted'])) {
 				</div>
 				<div class="col-md-6 col-md-offset-1">
 					<h2>Directory</h2>
-					<div class="row">			:q`			<div class="col-md-9 col-md-offset-3" style="text-align: left;">
+					<div class="row">
+						<div class="col-md-9 col-md-offset-3" style="text-align: left;">
 							<div class="row contact-info-row">
 								<div class="col-md-3 contact-info-icon"><img src="./glyphicons/glyphicons_010_envelope_edit.png" alt="Email" /></div>
 								<div class="col-md-9 contact-info-text"><img src="./img/email.png" alt="me AT brianchau DOT ca" /></div>
