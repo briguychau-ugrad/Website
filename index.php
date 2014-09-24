@@ -149,6 +149,20 @@ if(isset($_POST['submitted'])) {
 			<div class="row">
 				<div class="col-md-6">
 					<h2>Experience</h2>
+					<!--div class="row">
+						<div class="col-md-3">
+							<img src="./img/lab126-small-white.png" alt="Microsoft">
+						</div>
+						<div class="col-md-8" style="text-align: left;">
+							<h4>Amazon Lab 126</h4>
+							<h5>Software Development Engineer Intern</h5>
+							<h6>September 2014 to December 2014</h6>
+							<ul>
+								<li>TBD.</li>
+							</ul>
+						</div>
+					</div>
+					<br /><br /><!-- NOTE NEED THIS DOUBLE BR TAG BETWEEN ELEMENTS -->
 					<div class="row">
 						<div class="col-md-3">
 							<img src="./img/microsoft-white-small.png" alt="Microsoft">
@@ -158,7 +172,7 @@ if(isset($_POST['submitted'])) {
 							<h5>Software Development Engineer Intern</h5>
 							<h6>May 2014 to August 2014</h6>
 							<ul>
-								<li>I'm an intern in Windows working on a graphics API.</li>
+								<li>I was intern in Windows working on a graphics API.</li>
 							</ul>
 						</div>
 					</div>
