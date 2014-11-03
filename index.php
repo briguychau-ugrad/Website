@@ -400,7 +400,7 @@ if(isset($_POST['submitted'])) {
 							</div>
 							<div class="row contact-info-row">
 								<div class="col-md-3 contact-info-icon"><img src="./glyphicons/glyphicons_036_file.png" alt="R&#233;sum&#233;" /></div>
-								<div class="col-md-9 contact-info-text"><a href="./resume_brian_chau.pdf" target="_blank">R&#233;sum&#233; (July 2014)</a></div>
+								<div class="col-md-9 contact-info-text"><a href="./resume_brian_chau.pdf" target="_blank">R&#233;sum&#233; (October 2014)</a></div>
 							</div>
 						</div>
 					</div>
