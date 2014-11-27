@@ -95,13 +95,13 @@ if(isset($_POST['submitted'])) {
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
 	<div class="navbar-inner">
-			<div class="nav-collapse collapse" id="topnav">
-				<ul class="nav code">
-					<li><a href="#top">Top</a></li>
-					<li><a href="#technical">Technical</a></li>
-					<li><a href="#projects">Projects</a></li>
-					<li><a href="#education">Education</a></li>
-					<li><a href="#profile">Profile</a></li>
+			<div class="code" id="topnav">
+				<ul class="nav">
+					<li><a class="navbar-link" href="#top">Top</a></li>
+					<li><a class="navbar-link" href="#technical">Technical</a></li>
+					<li><a class="navbar-link" href="#projects">Projects</a></li>
+					<li><a class="navbar-link" href="#education">Education</a></li>
+					<li><a class="navbar-link" href="#profile">Profile</a></li>
 				</ul>
 			</div><!-- /.nav-collapse .collapse -->
 	</div><!-- /.navbar-inner -->
@@ -158,7 +158,7 @@ if(isset($_POST['submitted'])) {
 							<h5>Software Development Engineer Intern</h5>
 							<h6>September 2014 to December 2014</h6>
 							<ul>
-								<li>I'm currently working on a team responsible for the Mayday feature in Kindles.</li>
+								<li>I'm currently working on a team responsible for the Mayday feature in Fire tablets.</li>
 							</ul>
 						</div>
 					</div>
@@ -358,12 +358,12 @@ if(isset($_POST['submitted'])) {
 						<p>I'm Brian, and I'm a twenty-one-year-old student and software developer in Vancouver, BC, Canada. I'm currently studying computer science at the University of British Columbia, where I'm in my third year in a five year program. Within computer science, my focus is mainly on software engineering, but I'm also interested in systems and programming languages.</p>
 						<p>Here are some other facts about me:</p>
 						<ul>
-							<li>Here are the past programming competitions I have participated in:
+							<!--li>Here are the past programming competitions I have participated in:
 								<ul>
 									<li>Google Code Jam 2013: Online Round 2, 1617th (id: briguychau)</li>
 									<li>ACM Pacific Northwest Region Programming Contest: 19th (Team: UBC Compile Error)</li>
 								</ul>
-							</li>
+							</li-->
 							<li>I can speak English, Chinese (Cantonese and Mandarin), some French, and a little bit of German (in addition to C++, Java, etc.).</li>
 							<li>I use Windows 7, Mac OS X Mavericks, Linux Mint 17, and Android 4.4.</li>
 							<li>I am part of the online "Microsoft Flight Simulator" community. I make repaints for freeware aircraft, which can be found by searching for my name on <a href="http://www.avsim.com/">AVSIM</a> or <a href="http://www.flightsim.com/">FlightSim</a>. Alternatively, <a href="http://fs.brianchau.ca/">here is a link</a> to my Flight Simulator downloads page.</li>

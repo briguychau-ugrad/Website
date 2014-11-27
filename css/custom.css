@@ -101,11 +101,6 @@ h7 {
 /* REGULAR STYLES */
 .navbar .nav,
 .navbar .nav > li {
-	font-weight: 150%;
-	font-variant:small-caps;
-	color: #101010;
-	font-size: 13pt;
-	height: 125%;
 	float:none;
 	display:inline-block;
 	*display:inline; /* ie7 fix */
@@ -113,6 +108,15 @@ h7 {
 }
 .navbar-inner {
 	text-align:center;
+}
+.navbar-link,
+.navbar-link:hover,
+.navbar-link:focus {
+    background-color: transparent !important;
+    color: #e0e0e0 !important;
+    font-weight: 150%;
+    font-variant:small-caps;
+    font-size: 13pt;
 }
 .jumbotron {
 	margin: 0 auto;
