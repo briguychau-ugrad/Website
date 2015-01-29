@@ -363,7 +363,7 @@ if(isset($_POST['submitted'])) {
                     <h2>About Me</h2>
                     <div style="text-align: left;">
                         <!-- Image of me here -->
-                        <p>I'm Brian, and I'm a twenty-one-year-old student and software developer in Vancouver, BC, Canada. I'm currently studying computer science at the University of British Columbia, where I'm in my third year in a five year program. Within computer science, my focus is mainly on software engineering, but I'm also interested in systems and programming languages.</p>
+                        <p>I'm Brian, and I'm a twenty-two-year-old student and software developer in Vancouver, BC, Canada. I'm currently studying computer science at the University of British Columbia, where I'm in my third year in a five year program. Within computer science, my focus is mainly on software engineering, but I'm also interested in systems and programming languages.</p>
                         <p>Here are some other facts about me:</p>
                         <ul>
                             <!--li>Here are the past programming competitions I have participated in:
@@ -408,7 +408,7 @@ if(isset($_POST['submitted'])) {
                             </div>
                             <div class="row contact-info-row">
                                 <div class="col-md-3 contact-info-icon"><img src="./glyphicons/glyphicons_036_file.png" alt="R&#233;sum&#233;" /></div>
-                                <div class="col-md-9 contact-info-text"><a href="./resume_brian_chau.pdf" target="_blank">R&#233;sum&#233; (August 2014)</a></div>
+                                <div class="col-md-9 contact-info-text"><a href="./resume_brian_chau.pdf" target="_blank">R&#233;sum&#233; (January 2015)</a></div>
                             </div>
                         </div>
                     </div>
@@ -520,6 +520,6 @@ if(isset($_POST['submitted'])) {
 </html>
 
 <!-- Suffix Information -->
-<!-- Last update timestamp: 2014-12-20T19:02-08 -->
+<!-- Last update timestamp: 2015-01-29T02:06-08 -->
 <!-- Version: 7.2.0 -->
 <!-- Licence for DejaVu Fonts at http://dejavu-fonts.org/wiki/License -->
