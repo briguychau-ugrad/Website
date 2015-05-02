@@ -151,6 +151,20 @@ if(isset($_POST['submitted'])) {
                     <h2>Experience</h2>
                     <div class="row">
                         <div class="col-md-3">
+                            <img src="./img/ata-white-small.png" alt="A Thinking Ape">
+                        </div>
+                        <div class="col-md-8" style="text-align: left;">
+                            <h4>A Thinking Ape</h4>
+                            <h5>Software Development Engineer Co-op</h5>
+                            <h6>May 2015 to August 2015</h6>
+                            <ul>
+                                <li>TBD</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <br /><br /><!-- NOTE NEED THIS DOUBLE BR TAG BETWEEN ELEMENTS FOR SPACING -->
+                    <div class="row">
+                        <div class="col-md-3">
                             <img src="./img/ubc-white-small.png" alt="UBC">
                         </div>
                         <div class="col-md-8" style="text-align: left;">
@@ -205,7 +219,7 @@ if(isset($_POST['submitted'])) {
                             <h6>January 2014 to April 2014</h6>
                             <ul>
                                 <li>I worked on a software engineering team during my time at ATA. I introduced a few new features and implemented them on the server and both Android and iOS clients.</li>
-                                <li>My projects were mainly based on improving user aquisition and monetization. I introduced Facebook sharing and memberships into the application.</li>
+                                <li>My projects were mainly based on improving user aquisition and monetization. I introduced Facebook sharing and memberships into the application. I also designed and implemented a membership feature, which increased the user retention rate significantly.</li>
                             </ul>
                         </div>
                     </div>
@@ -229,10 +243,10 @@ if(isset($_POST['submitted'])) {
                             <div class="col-xs-4">Objective-C</div>
                             <div class="col-xs-8"><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div></div></div>
                         </div>
-                        <!--div class="row">
+                        <div class="row">
                             <div class="col-xs-4">Python</div>
                             <div class="col-xs-8"><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div></div></div>
-                        </div-->
+                        </div>
                         <div class="row">
                             <div class="col-xs-4">Haskell</div>
                             <div class="col-xs-8"><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div></div></div>
@@ -322,9 +336,9 @@ if(isset($_POST['submitted'])) {
                     September 2011 to May 2016 <em>(expected)</em><br /><br />
                     Future relevant coursework:
                     <ul>
-                        <li>CPSC 319: Software Engineering Project TBD</li>
-                        <li>CPSC 411: Compiler Construction TBD</li>
-                        <li>CPSC 420: Advanced Algorithm Design and Analysis TBD</li>
+                        <li>CPSC 410: Advanced Software Engineering</li>
+                        <li>CPSC 415: Advanced Operating Systems</li>
+                        <li>MATH 312: Introduction to Number Theory</li>
                     </ul>
                     Select completed coursework:
                     <ul>
@@ -332,7 +346,9 @@ if(isset($_POST['submitted'])) {
                         <li>CPSC 311: Definition of Programming Languages</li>
                         <li>CPSC 312: Functional and Logic Programming</li>
                         <li>CPSC 313: Computer Hardware and Operating Systems</li>
-                        <li>CPSC 320: Intermediate Algorithm Design and Analysis</li>
+                        <li>CPSC 319: Software Engineering Project</li>
+                        <li>CPSC 411: Compiler Construction</li>
+                        <li>CPSC 420: Advanced Algorithm Design and Analysis</li>
                         <li>CPSC 421: Introduction to Theory of Computing</li>
                         <li>MATH 223: Honours Linear Algebra</li>
                         <li>STAT 302: Introduction to Probability</li>
@@ -372,8 +388,8 @@ if(isset($_POST['submitted'])) {
                                     <li>ACM Pacific Northwest Region Programming Contest: 19th (Team: UBC Compile Error)</li>
                                 </ul>
                             </li-->
-                            <li>I can speak English, Chinese (Cantonese and Mandarin), some French, and a little bit of German at one point (but not anymore).</li>
-                            <li>I use Windows 7, Mac OS X Mavericks, Ubuntu 14.04 Server, and Android 5.0.</li>
+                            <li>I can speak English, Chinese (Cantonese and Mandarin), some French, very little Japanese, and at one point a little bit of German (but not anymore).</li>
+                            <li>I use Windows 7, Mac OS X Yosemite, Linux Mint 17.1, Ubuntu 14.04 Server, and Android 5.0.</li>
                             <li>I am part of the online "Microsoft Flight Simulator" community. I make repaints for freeware aircraft, which can be found by searching for my name on <a href="http://www.avsim.com/">AVSIM</a> or <a href="http://www.flightsim.com/">FlightSim</a>. Alternatively, <a href="http://fs.brianchau.ca/">here is a link</a> to my Flight Simulator downloads page.</li>
                         </ul>
                     </div>
@@ -466,7 +482,7 @@ if(isset($_POST['submitted'])) {
 <div style="height: 1px; background-color: #dddddd;"></div>
 <div id="footer">
     <div class="container" style="text-align: center; width: 100%;">
-        <span class="footer-section">Copyright &copy; 2014 Brian Chau</span>
+        <span class="footer-section">Copyright &copy; 2015 Brian Chau</span>
         <span class="footer-section"><a href="http://validator.w3.org/check?uri=referer&amp;No200=1" target="_blank">Valid</a> HTML<img src="./img/html5-black.png" alt="HTML5" /></span>
         <span class="footer-section">
             <a href="http://www.glyphicons.com/" target="_blank">GLYPHICONS</a> are used under the <a href="http://creativecommons.org/licenses/by/3.0/deed.en" target="_blank">Creative Commons Attribution 3.0 Unported</a> license
@@ -520,6 +536,6 @@ if(isset($_POST['submitted'])) {
 </html>
 
 <!-- Suffix Information -->
-<!-- Last update timestamp: 2015-01-29T02:06-08 -->
+<!-- Last update timestamp: 2015-05-01T10:50-07 -->
 <!-- Version: 7.2.0 -->
 <!-- Licence for DejaVu Fonts at http://dejavu-fonts.org/wiki/License -->
