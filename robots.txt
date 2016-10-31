@@ -13,4 +13,6 @@ Disallow: /default.html
 Disallow: /error.php
 Disallow: /resume-brian-chau.pdf
 Disallow: /install.html
+Disallow: /picturethis.conf
+
 
