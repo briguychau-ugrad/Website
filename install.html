@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="PictureThis! Server Environment Install Instructions" />
+    <meta name="author" content="Brian Chau" />
+    <meta name="robots" content="nofollow" />
+    <title>Install Instructions</title>
+    
+    <!-- CSS -->
+    <style>
+    body {
+        background-color: #333333;
+        font-family: Helvetica, Arial, Sans-serif;
+    }
+    #main {
+        background-color: #ffffff;
+        margin: 100px auto 0px auto;
+        padding: 30px;
+        width: 960px;
+    }
+    </style>
+
+</head>
+<body>
+<div id="main">
+<h1>PictureThis! Server Environment Development Enviornment Setup</h1>
+
+<h3>Step 1: Install Linux in VirtualBox</h3>
+Please download <a href="http://www.ubuntu.com/download/server">Ubuntu Server 14.04.3 LTS</a>. Save the ISO somewhere accessible. Then, download and install <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox 5.0</a>. Afterwards, please reboot your computer because VirtualBox doesn't work properly unless you reboot. Afterwards, you're ready to install Ubuntu.<br /><br />
+<ul>
+<li>Click "New" in the VirtualBox Manager.</li>
+<li>For "Name", put in something like "410VM". For "Type" and "Version", use "Linux" and "Ubuntu (64-bit)". Click Next.</li>
+<li>For Memory, 512MB is probably enough, but if you have enough RAM on your computer, you could boost it to 1024MB. I'm going to use 512MB to match the actual server enviornment.</li>
+<li>Select "Create a virtual hard disk now", and then click "Create". In the new window, select "VDI" and then Next, and then "Dynamically allocated" and the Next, and then name it "410VM" and give it 8GB of space. Click "Create".</li>
+</ul>
+Now that we set up the VM, we can install Linux. Select the VM you created and click "Start". And then, follow the instructions.
+<ul>
+<li>When the "Select start-up disk" window shows up, find the ISO you downloaded previously, and then click Start. It should be called "ubuntu-14.04.3-server-amd64.iso" or something similar.</li>
+<li>There is no mouse interface for installing here, so you need to use the arrow keys to choose, and enter to select. Choose English and then select. Then, select "Install Ubuntu Server".</li>
+<li>Select "English - English" and then "Canada". When asked to detect keyboard layout, select "No" and choose "English (US)" twice. Some stuff will happen in the back.</li>
+<li>When asked for the "hostname", just use "410vm" instead of whatever default they have (note the lowercase).</li>
+<li>Enter your name, username, and then make up a password. This doesn't have to be terribly sercure since it's on your computer. For home directory encryption, select "No".</li>
+<li>For time zone, use America/Vancouver. It should have been automatically selected for you already anyway.</li>
+<li>For setting up disk partitioning, just use the default settings. Some more stuff will happen in the back.</li>
+<li>For HTTP proxy, leave blank. For automatic updates, select "none".</li>
+<li>When selecting software to install, scroll (with arrow keys) to "Open SSH Server", and press spacebar. This should "highlight" that software to be installed. Then click enter to continue.</li>
+<li>For "Install the GRUB boot loader ...", just select Yes.</li>
+</ul>
+This should be it! Restart the VM when prompted and we have completed the installation of Linux. Now, we can set it up so it's slightly easier to deal with.
+<ul>
+<li>First, turn off the VM (send the shutdown signal).</li>
+<li>Then, in the main VirtualBox Manager window, go to File > Preferences > Network > Host-only Networks. Create a new one by clicking the little + icon. Double click the new network, and then go to DHCP servers. Uncheck the box and click OK to exit, and OK again.</li>
+<li>Press "Settings", and then go to Network. For Adapter 2, enable, then select Host-only Adapter, and then click OK to save.</li>
+
+</ul>
+We can launch the VM again and we'll start installing software.
+
+<h3>Step 2: Install all required software.</h3>
+Boot up the VM and login. Afterwards we can enter the following commands to install software.
+<ul>
+<li>In the VM, edit the <tt>/etc/network/interfaces</tt> file (<tt>sudo</tt> required):<br /><pre># Virtualbox Host Only Adapter<br />auto eth1<br />iface eth1 inet static<br />&nbsp;&nbsp;&nbsp;&nbsp;address 192.168.56.101<br />&nbsp;&nbsp;&nbsp;&nbsp;netmask 255.255.255.0</pre>Restart the VM after this.<br /><br /></li>
+<li>Then, update the software.<br /><pre>$ sudo apt-get update</pre>When asked for your password, enter it. Then, <br /><pre>$ sudo apt-get dist-upgrade</pre></li>
+<li>Install Apache:<br /><pre>$ sudo apt-get install apache2</pre></li>
+<li>Install Git:<br /><pre>$ sudo apt-get install git</pre></li>
+<li>Install pip, python-dev, mod-wsgi, and mysql:<br /><pre>$ sudo apt-get install python-pip python-dev mysql-server libmysqlclient-dev libapache2-mod-wsgi</pre>For the MySQL root password, it doesn't really matter. Don't leave it blank.</li>
+<li>Install MySqlDB:<br /><pre>$ sudo pip install mysql-python</pre></li>
+<li>Install Django:<br /><pre>$ sudo pip install django</pre></li>
+<li>Install Django cors headers:<br /><pre>$ sudo pip install django-cors-headers</pre></li>
+<li>Install VirtualBox Guest Additions: go to Devices > Insert Guest Additions CD Image. Then,<br /><pre>$ sudo mount /dev/cdrom /media/cdrom</pre><pre>$ sudo /media/cdrom/VBoxLinuxAdditions.run</pre></li>
+</ul>
+Now, restart the VM again. After rebooting, go to Deviecs > Optical Drives > Remove disk from virtual drive.
+
+<h3>Step 3: Set up MySQL Database</h3>
+Set up the MySQL database with the following credentials:
+<ul>
+<li>Enter the mysql database with your root credentials.<br /><pre>$ mysql -u root -p</pre>At the prompt, enter your password for MySQL.</li>
+<li>Create a new database called <tt>picturethis_db</tt>:<br /><pre>mysql&gt; CREATE DATABASE picturethis_db;</pre></li>
+<li>Create a new user called <tt>picturethis_user</tt> with password <tt>F1nd1ngN3m0</tt>:<br /><pre>mysql&gt; CREATE USER 'picturethis_user'@'localhost' IDENTIFIED BY 'F1nd1ngN3m0';</pre></li>
+<li>Grant permissions for the user on the current database:<br /><pre>mysql&gt; GRANT ALL PRIVILEGES ON picturethis_db.* TO 'picturethis_user'@'localhost';</pre></li>
+<li>Exit mysql.<br /><pre>mysql&gt; exit;</pre>
+</ul>
+
+<h3>Step 4: Configure Apache</h3>
+Configure apache by running these commands:
+<ul>
+<li>Navigate to <tt>/etc/apache2/sites-available/</tt>.<br /><pre>$ cd /etc/apache2/sites-available</pre></li>
+<li>Download the configuration file:<br /><pre>$ sudo wget http://www.brianchau.ca/picturethis.conf</pre></li>
+<li>Activate the config:<br /><pre>$ cd ../sites-enabled</pre><pre>$ sudo rm 000-default.conf</pre><pre>$ sudo ln -s ../sites-available/picturethis.conf picturethis.conf</pre></li>
+</ul>
+
+<h3>Step 5: Configure Project Files</h3>
+<ul>
+<li>Go to Devices > Shared Folders > Shared Folder Settings. In there, create a new shared folder. Folder Path is the path to the git directory, and use "cs410" for the folder name. Check "permanent".</li>
+<li>Set up auto mounting of the drive on boot:<br /><pre>$ sudo mkdir /cs410</pre></li>
+<li>Add the following to your <tt>/etc/rc.local</tt> file (you need <tt>sudo</tt> privileges to edit), before the <tt>exit 0</tt> line:<br /><pre>mount -t vboxsf cs410 /cs410</pre></li>
+<li>Mount the shared folder:<br /><pre>$ sudo mount -t vboxsf cs410 /cs410</pre></li>
+<li>Link your shared folder to the appropriate place:<br /><pre>$ sudo ln -s /cs410/server /var/www/picturethis</pre></li>
+<li>Create a database locally:<br /><pre>$ cd /var/www/picturethis</pre><pre>$ ./manage.py migrate</pre></li>
+<li>Restart Apache<br /><pre>$ sudo apachectl graceful</pre></li>
+</ul>
+
+Now if you go to <a href="http://192.168.56.101">http://192.168.56.101</a>, the page should tell you that Django is installed!<br /><br />
+
+Ask me (Brian) if you have any questions.
+
+</div>
+</body>
+</html>
