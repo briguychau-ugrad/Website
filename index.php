@@ -310,7 +310,7 @@ if(isset($_POST['submitted'])) {
                     <h4>FoodHero (CPSC 310)</h4>
                     <p>Languages: <em>HTML, PHP, JavaScript, CSS, SQL</em></p>
                     <p>FoodHero is a restaurant-based social media website. Users are allowed to “fave” and review restaurants, upload photos of food, follow other users and see their reviews, and search for restaurants within Vancouver and UBC. Restaurant data from FourSquare, photo uploading provided by Flickr, mapping provided by Google Maps.</p>
-                    <p><a href="http://foodhero.brianchau.ca" target="_blank">Live site</a></p>
+                    <p><a href="http://foodhero.sharkydev.com" target="_blank">Live site</a></p>
                     <br />
                     <h4>UBC Sustainability App (CPSC 210)</h4>
                     <p>Language/Platform: <em>Java/Android</em></p>
@@ -333,24 +333,22 @@ if(isset($_POST['submitted'])) {
                     <h4>Faculty of Science</h4>
                     Honours Computer Science and Software Engineering<br />
                     Computer Science Co-op Program<br />
-                    September 2011 to May 2016 <em>(expected)</em><br /><br />
-                    Future relevant coursework:
-                    <ul>
-                        <li>CPSC 410: Advanced Software Engineering</li>
-                        <li>CPSC 415: Advanced Operating Systems</li>
-                        <li>MATH 312: Introduction to Number Theory</li>
-                    </ul>
+                    September 2011 to May 2016<br /><br />
+
                     Select completed coursework:
                     <ul>
-                        <li>CPSC 310: Introduction to Software Engineering</li>
+                        <li>CPSC 304: Introduction to Relational Databases</li>
                         <li>CPSC 311: Definition of Programming Languages</li>
                         <li>CPSC 312: Functional and Logic Programming</li>
-                        <li>CPSC 313: Computer Hardware and Operating Systems</li>
+                        <li>CPSC 317: Internet Computing</li>
                         <li>CPSC 319: Software Engineering Project</li>
+                        <li>CPSC 410: Advanced Software Engineering</li>
                         <li>CPSC 411: Compiler Construction</li>
+                        <li>CPSC 415: Advanced Operating Systems</li>
                         <li>CPSC 420: Advanced Algorithm Design and Analysis</li>
                         <li>CPSC 421: Introduction to Theory of Computing</li>
                         <li>MATH 223: Honours Linear Algebra</li>
+                        <li>MATH 312: Introduction to Number Theory</li>
                         <li>STAT 302: Introduction to Probability</li>
                     </ul>
                 </div>
@@ -379,7 +377,7 @@ if(isset($_POST['submitted'])) {
                     <h2>About Me</h2>
                     <div style="text-align: left;">
                         <!-- Image of me here -->
-                        <p>I'm Brian, and I'm a twenty-two-year-old student and software developer in Vancouver, BC, Canada. I'm currently studying computer science at the University of British Columbia, where I'm in my third year in a five year program. Within computer science, my focus is mainly on software engineering, but I'm also interested in systems and programming languages.</p>
+                        <p>I'm Brian, and I'm a twenty-three-year-old software developer in Vancouver, BC, Canada. I studied computer science at the University of British Columbia. Within computer science, my focus is mainly on software engineering, but I'm also interested in systems and programming languages.</p>
                         <p>Here are some other facts about me:</p>
                         <ul>
                             <!--li>Here are the past programming competitions I have participated in:
@@ -388,8 +386,8 @@ if(isset($_POST['submitted'])) {
                                     <li>ACM Pacific Northwest Region Programming Contest: 19th (Team: UBC Compile Error)</li>
                                 </ul>
                             </li-->
-                            <li>I can speak English, Chinese (Cantonese and Mandarin), some French, very little Japanese, and at one point a little bit of German (but not anymore).</li>
-                            <li>I use Windows 7, Mac OS X Yosemite, Linux Mint 17.1, Ubuntu 14.04 Server, and Android 5.0.</li>
+                            <li>I can speak English, Chinese (Cantonese and Mandarin), very little Japanese, and at one point a little bit of French and German (but not anymore).</li>
+                            <li>I use Windows 10, Mac OS X El Capitan, Ubuntu 16.04 Server, and Android 7.1.</li>
                             <li>I am part of the online "Microsoft Flight Simulator" community. I make repaints for freeware aircraft, which can be found by searching for my name on <a href="http://www.avsim.com/">AVSIM</a> or <a href="http://www.flightsim.com/">FlightSim</a>. Alternatively, <a href="http://fs.brianchau.ca/">here is a link</a> to my Flight Simulator downloads page.</li>
                         </ul>
                     </div>
@@ -482,7 +480,7 @@ if(isset($_POST['submitted'])) {
 <div style="height: 1px; background-color: #dddddd;"></div>
 <div id="footer">
     <div class="container" style="text-align: center; width: 100%;">
-        <span class="footer-section">Copyright &copy; 2015 Brian Chau</span>
+        <span class="footer-section">Copyright &copy; 2016 Brian Chau</span>
         <span class="footer-section"><a href="http://validator.w3.org/check?uri=referer&amp;No200=1" target="_blank">Valid</a> HTML<img src="./img/html5-black.png" alt="HTML5" /></span>
         <span class="footer-section">
             <a href="http://www.glyphicons.com/" target="_blank">GLYPHICONS</a> are used under the <a href="http://creativecommons.org/licenses/by/3.0/deed.en" target="_blank">Creative Commons Attribution 3.0 Unported</a> license
