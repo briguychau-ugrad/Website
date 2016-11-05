@@ -72,6 +72,14 @@ Boot up the VM and login. Afterwards we can enter the following commands to inst
 </ul>
 Now, restart the VM again. After rebooting, go to Deviecs > Optical Drives > Remove disk from virtual drive.
 
+<h3>Step 3: Configure Apache</h3>
+Configure apache by running these commands:
+<ul>
+<li>Navigate to <tt>/etc/apache2/sites-available/</tt>.<br /><pre>$ cd /etc/apache2/sites-available</pre></li>
+<li>Download the configuration file:<br /><pre>$ sudo wget http://www.sharkydev.com/picturethis/picturethis.conf</pre></li>
+<li>Activate the config:<br /><pre>$ cd ../sites-enabled</pre><pre>$ sudo rm 000-default.conf</pre><pre>$ sudo ln -s ../sites-available/picturethis.conf picturethis.conf</pre></li>
+</ul>
+
 <h3>Step 3: Set up MySQL Database</h3>
 Set up the MySQL database with the following credentials:
 <ul>
@@ -82,22 +90,14 @@ Set up the MySQL database with the following credentials:
 <li>Exit mysql.<br /><pre>mysql&gt; exit;</pre>
 </ul>
 
-<h3>Step 4: Configure Apache</h3>
-Configure apache by running these commands:
-<ul>
-<li>Navigate to <tt>/etc/apache2/sites-available/</tt>.<br /><pre>$ cd /etc/apache2/sites-available</pre></li>
-<li>Download the configuration file:<br /><pre>$ sudo wget http://www.brianchau.ca/picturethis.conf</pre></li>
-<li>Activate the config:<br /><pre>$ cd ../sites-enabled</pre><pre>$ sudo rm 000-default.conf</pre><pre>$ sudo ln -s ../sites-available/picturethis.conf picturethis.conf</pre></li>
-</ul>
-
-<h3>Step 5: Configure Project Files</h3>
+<h3>Step 4: Configure Project Files</h3>
 <ul>
 <li>Go to Devices > Shared Folders > Shared Folder Settings. In there, create a new shared folder. Folder Path is the path to the git directory, and use "cs410" for the folder name. Check "permanent".</li>
 <li>Set up auto mounting of the drive on boot:<br /><pre>$ sudo mkdir /cs410</pre></li>
 <li>Add the following to your <tt>/etc/rc.local</tt> file (you need <tt>sudo</tt> privileges to edit), before the <tt>exit 0</tt> line:<br /><pre>mount -t vboxsf cs410 /cs410</pre></li>
 <li>Mount the shared folder:<br /><pre>$ sudo mount -t vboxsf cs410 /cs410</pre></li>
 <li>Link your shared folder to the appropriate place:<br /><pre>$ sudo ln -s /cs410/server /var/www/picturethis</pre></li>
-<li>Create a database locally:<br /><pre>$ cd /var/www/picturethis</pre><pre>$ ./manage.py migrate</pre></li>
+<li>Create a database locally. You'll need to enter your MySQL root password at some point:<br /><pre>$ cd /var/www/picturethis</pre><pre>$ mysql -u root -p < sqls/setup.sql</pre><pre>$ ./manage.py migrate</pre></li>
 <li>Restart Apache<br /><pre>$ sudo apachectl graceful</pre></li>
 </ul>
 
