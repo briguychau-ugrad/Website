@@ -5,66 +5,66 @@ $hasError = false;
 $captchaErrorBool = false;
 
 //If the form is submitted
-if(isset($_POST['submitted'])) {
-    
-    // require a name from user
-    if(trim($_POST['form-name']) === '') {
-        $nameError =  'This is a required field.'; 
-        $hasError = true;
-    } else {
-        $name = trim($_POST['form-name']);
-    }
-    
-    // need valid email
-    if(trim($_POST['form-email']) === '')  {
-        $emailError = 'This is a required field.';
-        $hasError = true;
-    } else if (!preg_match("/^[[:alnum:]][a-z0-9_.-]*@[a-z0-9.-]+\.[a-z]{2,4}$/i", trim($_POST['form-email']))) {
-        $emailError = 'The email address is invalid.';
-        $hasError = true;
-    } else {
-        $email = trim($_POST['form-email']);
-    }
-    
-    // we need at least some content
-    if(trim($_POST['form-message']) === '') {
-        $commentError = 'This is a required field.';
-        $hasError = true;
-    } else {
-        if(function_exists('stripslashes')) {
-            $comments = stripslashes(trim($_POST['form-message']));
-        } else {
-            $comments = trim($_POST['form-message']);
-        }
-    }
-    
-    // check recaptcha
-    /*require_once('recaptchalib.php');
-    $privatekey = "6LfNgeISAAAAAJA7uGiFxLGnJLXHGfKcbLViyln_";
-    $resp = recaptcha_check_answer ($privatekey,
-                    $_SERVER["REMOTE_ADDR"],
-                    $_POST["recaptcha_challenge_field"],
-                    $_POST["recaptcha_response_field"]);
-    if (!$resp->is_valid) {
-        $captchaError = "The reCAPTCHA wasn't entered correctly. Please try it again.";
-        $captchaErrorBool = true;
-        $hasError = true;
-    }*/
-    
-    // upon no failure errors let's email now!
-    if(!$hasError) {
-        $emailTo = 'me@brianchau.ca';
-        $subject = 'Submitted message from '.$name;
-        $sendCopy = trim($_POST['sendCopy']);
-        $body = "{$comments}" . "\r\n \r\n" . "IP Address = {$_SERVER['REMOTE_ADDR']}; From: {$name}, {$email}";
-        $headers = "From: Contact Form <no-reply@brianchau.ca>" . "\r\n" . "Reply-To: {$name} <{$email}>";
-        
-        mail($emailTo, $subject, $body, $headers);
-        
-        // set our boolean completion value to TRUE
-        $emailSent = true;
-    }
-}
+//if(isset($_POST['submitted'])) {
+//
+//    // require a name from user
+//    if(trim($_POST['form-name']) === '') {
+//        $nameError =  'This is a required field.'; 
+//        $hasError = true;
+//    } else {
+//        $name = trim($_POST['form-name']);
+//    }
+//
+//    // need valid email
+//    if(trim($_POST['form-email']) === '')  {
+//        $emailError = 'This is a required field.';
+//        $hasError = true;
+//    } else if (!preg_match("/^[[:alnum:]][a-z0-9_.-]*@[a-z0-9.-]+\.[a-z]{2,4}$/i", trim($_POST['form-email']))) {
+//        $emailError = 'The email address is invalid.';
+//        $hasError = true;
+//    } else {
+//        $email = trim($_POST['form-email']);
+//    }
+//
+//    // we need at least some content
+//    if(trim($_POST['form-message']) === '') {
+//        $commentError = 'This is a required field.';
+//        $hasError = true;
+//    } else {
+//        if(function_exists('stripslashes')) {
+//            $comments = stripslashes(trim($_POST['form-message']));
+//        } else {
+//            $comments = trim($_POST['form-message']);
+//        }
+//    }
+//
+//    // check recaptcha
+//    /*require_once('recaptchalib.php');
+//    $privatekey = "6LfNgeISAAAAAJA7uGiFxLGnJLXHGfKcbLViyln_";
+//    $resp = recaptcha_check_answer ($privatekey,
+//                    $_SERVER["REMOTE_ADDR"],
+//                    $_POST["recaptcha_challenge_field"],
+//                    $_POST["recaptcha_response_field"]);
+//    if (!$resp->is_valid) {
+//        $captchaError = "The reCAPTCHA wasn't entered correctly. Please try it again.";
+//        $captchaErrorBool = true;
+//        $hasError = true;
+//    }*/
+//
+//    // upon no failure errors let's email now!
+//    if(!$hasError) {
+//        $emailTo = 'me@brianchau.ca';
+//        $subject = 'Submitted message from '.$name;
+//        $sendCopy = trim($_POST['sendCopy']);
+//        $body = "{$comments}" . "\r\n \r\n" . "IP Address = {$_SERVER['REMOTE_ADDR']}; From: {$name}, {$email}";
+//        $headers = "From: Contact Form <no-reply@brianchau.ca>" . "\r\n" . "Reply-To: {$name} <{$email}>";
+//
+//        mail($emailTo, $subject, $body, $headers);
+//
+//        // set our boolean completion value to TRUE
+//        $emailSent = true;
+//    }
+//}
 ?>
 <!DOCTYPE html>
 <html lang="en-ca">
@@ -427,51 +427,53 @@ if(isset($_POST['submitted'])) {
                         </div>
                     </div>
                     <br /><br />
-                    <!--h2>Contact</h2>
-                    <form method="POST" action="index.php" class="form-horizontal" id="form-contact">
-                        <div id="contact-wrapper" style="text-align: left;">
-                <?php if($hasError) { ?>
-                            <div class="control-group">
-                                <div class="controls contact-form-box">
-                                    <p class="alert">There was an error processing your form.</p>
-                                </div>
-                            </div>
-                <?php } ?>
-                            <div class="control-group">
-                                <label class="control-label contact-form-label" for="form-name">Name</label>
-                                <div class="controls contact-form-box">
-                                    <input type="text" name="form-name" class="requiredField" id="form-name" value="<?php if(isset($_POST['form-name'])) echo $_POST['form-name'];?>" placeholder="Your name" /><br />
-                                    <?php if($nameError != '') { ?>
-                                        <span class="error"><?php echo $nameError;?></span> 
-                                    <?php } ?>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label contact-form-label" for="form-email">Email Address</label>
-                                <div class="controls contact-form-box">
-                                    <input type="text" name="form-email" class="requiredField email" id="form-email" value="<?php if(isset($_POST['form-email'])) echo $_POST['form-email'];?>" placeholder="Your email address" /><br />
-                                    <?php if($emailError != '') { ?>
-                                        <span class="error"><?php echo $emailError;?></span> 
-                                    <?php } ?>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label contact-form-label" for="form-message">Message</label>
-                                <div class="controls contact-form-box">
-                                    <textarea name="form-message" class="requiredField" id="form-message" rows="8" style="width:95%;" placeholder="Your message"><?php if(isset($_POST['form-message'])) echo $_POST['form-message'];?></textarea><br />
-                                    <?php if($commentError != '') { ?>
-                                        <span class="error"><?php echo $commentError;?></span> 
-                                    <?php } ?>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <div class="controls contact-form-box">
-                                    <input type="hidden" name="submitted" id="submitted" value="true" />
-                                    <button type="submit" name="submit" id="submit" class="btn btn-inverse">Send</button>
-                                </div>
-                            </div>
-                        </div> <!-- /#contact-wrapper -/->
-                    </form>-->
+<?php
+//                    <!--h2>Contact</h2>
+//                    <form method="POST" action="index.php" class="form-horizontal" id="form-contact">
+//                        <div id="contact-wrapper" style="text-align: left;">
+//                <?php if($hasError) { ?//>
+//                            <div class="control-group">
+//                                <div class="controls contact-form-box">
+//                                    <p class="alert">There was an error processing your form.</p>
+//                                </div>
+//                            </div>
+//                <?php } ?//>
+//                            <div class="control-group">
+//                                <label class="control-label contact-form-label" for="form-name">Name</label>
+//                                <div class="controls contact-form-box">
+//                                    <input type="text" name="form-name" class="requiredField" id="form-name" value="<?php if(isset($_POST['form-name'])) echo $_POST['form-name'];?//>" placeholder="Your name" /><br />
+//                                    <?php if($nameError != '') { ?//>
+//                                        <span class="error"><?php echo $nameError;?//></span> 
+//                                    <?php } ?//>
+//                                </div>
+//                            </div>
+//                            <div class="control-group">
+//                                <label class="control-label contact-form-label" for="form-email">Email Address</label>
+//                                <div class="controls contact-form-box">
+//                                    <input type="text" name="form-email" class="requiredField email" id="form-email" value="<?php if(isset($_POST['form-email'])) echo $_POST['form-email'];?//>" placeholder="Your email address" /><br />
+//                                    <?php if($emailError != '') { ?//>
+//                                        <span class="error"><?php echo $emailError;?//></span> 
+//                                    <?php } ?//>
+//                                </div>
+//                            </div>
+//                            <div class="control-group">
+//                                <label class="control-label contact-form-label" for="form-message">Message</label>
+//                                <div class="controls contact-form-box">
+//                                    <textarea name="form-message" class="requiredField" id="form-message" rows="8" style="width:95%;" placeholder="Your message"><?php if(isset($_POST['form-message'])) echo $_POST['form-message'];?//></textarea><br />
+//                                    <?php if($commentError != '') { ?//>
+//                                        <span class="error"><?php echo $commentError;?//></span> 
+//                                    <?php } ?//>
+//                                </div>
+//                            </div>
+//                            <div class="control-group">
+//                                <div class="controls contact-form-box">
+//                                    <input type="hidden" name="submitted" id="submitted" value="true" />
+//                                    <button type="submit" name="submit" id="submit" class="btn btn-inverse">Send</button>
+//                                </div>
+//                            </div>
+//                        </div> <!-- /#contact-wrapper -/->
+//                    </form>-->
+?>
                 </div>
             </div>
         </div>
@@ -534,6 +536,6 @@ if(isset($_POST['submitted'])) {
 </html>
 
 <!-- Suffix Information -->
-<!-- Last update timestamp: 2015-05-01T10:50-07 -->
-<!-- Version: 7.2.0 -->
+<!-- Last update timestamp: 2017-01-03T21:34-08 -->
+<!-- Version: 7.2.1 -->
 <!-- Licence for DejaVu Fonts at http://dejavu-fonts.org/wiki/License -->
