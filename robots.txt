@@ -9,6 +9,7 @@ Disallow: /glyphicons/
 Disallow: /img/
 Disallow: /js/
 Disallow: /projects/
+Disallow: /wedding/
 Disallow: /default.html
 Disallow: /error.php
 Disallow: /resume-brian-chau.pdf
